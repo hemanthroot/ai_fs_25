@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive design</title>
+    <style>
+        body {
+            background-color: tomato;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container, .container1, .container2 {
+            min-height: 100px;
+            width: 90vw;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: rgb(218, 213, 218);
+        }
+        .container1 {
+            background-color: violet;
+        }
+        .container2 {
+            background-color: black;
+            color: aliceblue;
+        }
+        .item1, .item2, .item3 {
+            height: 40px;
+            width: 22vw;
+            min-width: 80px;
+            max-width: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 5px;
+            border-radius: 6px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .item1 {
+            background-color: black;
+            color: antiquewhite;
+        }
+        .item2 {
+            background-color: rgb(166, 255, 0);
+            color: rgb(3, 3, 2);
+        }
+        .item3 {
+            background-color: rgb(133, 96, 96);
+            color: rgb(33, 19, 0);
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="item1">1</div>
+    </main>
+    <div class="container1">
+        <div class="item2">1</div>
+        <div class="item2">2</div>
+    </div>
+    <div class="container2">
+        <div class="item3">1</div>
+        <div class="item3">2</div>
+        <div class="item3">3</div>
+    </div>
+</body>
+</html>
