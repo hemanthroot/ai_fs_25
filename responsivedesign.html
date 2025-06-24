@@ -45,6 +45,10 @@
             border-radius: 6px;
             box-sizing: border-box;
             text-align: center;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: transform 0.1s, box-shadow 0.1s;
         }
         .item1 {
             background-color: black;
@@ -58,20 +62,25 @@
             background-color: rgb(133, 96, 96);
             color: rgb(33, 19, 0);
         }
+        .item1:active, .item2:active, .item3:active {
+            transform: scale(0.96);
+            box-shadow: 0 2px 8px #0002 inset;
+        }
+        .item1:hover, .item2:hover, .item3:hover {
+            box-shadow: 0 2px 8px #0003;
+        }
     </style>
 </head>
 <body>
     <main class="container">
-        <div class="item1">1</div>
+        <button class="item1">1</button>
     </main>
     <div class="container1">
-        <div class="item2">1</div>
-        <div class="item2">2</div>
+        <button class="item2">1</button>
+        <button class="item2">2</button>
     </div>
     <div class="container2">
-        <div class="item3">1</div>
-        <div class="item3">2</div>
-        <div class="item3">3</div>
+        <button class="item3">1</button>
+        <button class="item3">2</button>
+        <button class="item3">3</button>
     </div>
-</body>
-</html>
