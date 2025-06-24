@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Icon Webpage</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef; /* Light background color */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #007bff; /* Bootstrap primary color */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Space between icons */
+            margin-top: 10px; /* Space above icons */
+        }
+
+        .icon {
+            text-align: center;
+            font-size: 30px; /* Size of the icons */
+            color: #040709; /* Icon color */
+            transition: transform 0.3s, color 0.3s; /* Smooth transition */
+        }
+
+        .icon:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+            color: #070707; /* Darker color on hover */
+        }
+
+        .icon-label {
+            margin-top: 5px; /* Less space for labels */
+            font-size: 14px; /* Smaller font size for labels */
+            color: #555; /* Darker color for labels */
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .icon {
+                font-size: 25px; /* Smaller icons on mobile */
+            }
+
+            .icon-label {
+                font-size: 12px; /* Smaller labels on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Customized Icon Webpage</h1>
+        <div class="icon-container">
+            <div class="icon">
+                <i class="fas fa-home"></i>
+                <div class="icon-label">Home</div>
+            </div>
+            <div class="icon">
+                <i class="fas fa-user"></i>
+                <div class="icon-label">About</div>
+            </div>
+            <div class="icon">
+                <i class="fas fa-book"></i>
+                <div class="icon-label">Services</div>
+            </div>
+            <div class="icon">
+                <i class="fas fa-envelope"></i>
+                <div class="icon-label">Contact</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2>Welcome to the Icon Webpage!</h2>
+        <p>This is the main content area. You can add your text, images, or anything else here.</p>
+    </main>
+    <footer>
+        &copy; 2025 My Company. All rights reserved.
+    </footer>
+</body>
+</html>
