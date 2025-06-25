@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light background color */
+        }
+
+        header {
+            background-color: #ff5722; /* Header color */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #e64a19; /* Navigation color */
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .featured-dishes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .dish {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            width: 200px; /* Fixed width for dish items */
+            transition: transform 0.3s; /* Smooth transition */
+        }
+
+        .dish:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+
+        .dish img {
+            max-width: 100%; /* Responsive image */
+            border-radius: 5px; /* Rounded corners for images */
+        }
+
+        .dish-name {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .dish-price {
+            color: #28a745; /* Green color for price */
+            font-size: 16px;
+        }
+
+        .testimonials {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px; /* Max width for testimonials */
+        }
+
+        .testimonial {
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        .reservation-form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px; /* Max width for form */
+        }
+
+        .reservation-form input, .reservation-form select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .reservation-form button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .reservation-form button:hover {
+            background-color: #e64a19; /* Darker shade on hover */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .dish {
+                width: 90%; /* Full width on mobile */
+            }
+
+            nav {
+                flex-direction: column; /* Stack nav items on mobile */
+            }
+
+            nav a {
+                margin: 5px 0; /* Space between nav items */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Food Delivery App</h1>
+        <p>Your favorite meals delivered to your door!</p>
+    </header>
+    <nav>
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-utensils"></i> Menu</a>
+        <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
+        <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+    <div class="container">
+        <h2>Featured Dishes</h2>
+        <div class="featured-dishes">
+            <div class="dish">
+                <img src="https://imgs.search.brave.com/qgLL3GldCf3TMVuBU2FK6a-dgNjY1zbfgIhj2k1PglA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/Y3JlYXRlLnZpc3Rh/LmNvbS9hcGkvbWVk/aWEvc21hbGwvNjQ5/OTExNDAwL3N0b2Nr/LXBob3RvLXNpZGUt/dmlldy1iaWctYXNz/b3J0ZWQtcGl6emEt/dmFyaWV0eS10b3Bw/aW5ncw" alt="Pizza">
+                <div class="dish-name">Pizza</div>
+                <div class="dish-price">$12.99</div>
+            </div>
+            <div class="dish">
+                <img src="https://imgs.search.brave.com/u5_qx-FsNTEOsg4WpiDHFMaVSHG8HlHmtBbsdpjPxBw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9k/ZWxpY2lvdXMtYnVy/Z2VyLXN0dWRpb18y/My0yMTUxODQ2NDk2/LmpwZz9zZW10PWFp/c19oeWJyaWQmdz03/NDA" alt="Burger">
+                <div class="dish-name">Burger</div>
+                <div class="dish-price">$9.99</div>
+            </div>
+            <div class="dish">
+                <img src="https://imgs.search.brave.com/rxnJ7YlMZBY7fHR-TQudfr4wupNYh2F4s-6kC5BjgUY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9waW5j/aG9meXVtLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvUm9hc3Rl/ZC1SZWQtUGVwcGVy/LVBhc3RhLTgwMHg4/MDAuanBn" alt="Pasta">
+                <div class="dish-name">Pasta</div>
+                <div class="dish-price">$11.99</div>
+            </div>
+            <div class="dish">
+                <img src="https://imgs.search.brave.com/IgHDaPp4lYnT3pVbQHj0N7Fd0f3U2shTq0Ro7LnpLr8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMucGV4ZWxzLmNv/bS9waG90b3MvMTIx/MTg4Ny9wZXhlbHMt/cGhvdG8tMTIxMTg4/Ny5qcGVnP2F1dG89/Y29tcHJlc3MmY3M9/dGlueXNyZ2ImZHBy/PTEmdz01MDA" alt="Salad">
+                <div class="dish-name">Salad</div>
+                <div class="dish-price">$7.99</div>
+            </div>
+        </div>
+
+        <div class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">"The best pizza I've ever had!" - John D.</div>
+            <div class="testimonial">"Amazing service and delicious food!" - Sarah K.</div>
+            <div class="testimonial">"I love the atmosphere here!" - Mike L.</div>
+        </div>
+
+        <div class="reservation-form">
+            <h2>Make a Reservation</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="date" required>
+                <input type="time" required>
+                <select required>
+                    <option value="">Number of Guests</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit">Reserve Now</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Food Delivery App. All rights reserved.
+    </footer>
+</body>
+</html>
